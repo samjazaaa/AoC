@@ -1,4 +1,3 @@
-# Advent of Code 2022
+# Advent of Code
 
-- My solutions for the advent of code 2022 challenges
-- Python with tests for the provided examples
+My solutions for the [Advent of Code](https://adventofcode.com/) challenges
