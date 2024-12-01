@@ -1,18 +1,25 @@
 import sys
 
 
-def calculate_placeholder(lines):
+def calculate_similarity(lines):
     cleared_lines = []
 
     for line in lines:
         cleared_lines.append(line.replace("\n", ""))
 
-    placeholder_sum = 0
+    similarity = 0
+    left = []
+    right = []
 
     for line in cleared_lines:
-        placeholder_sum += 0
+        l, r = list(map(lambda val: int(val), line.split("   ")))
+        left.append(l)
+        right.append(r)
 
-    return placeholder_sum
+    for val in left:
+        similarity += val * right.count(val)
+
+    return similarity
 
 
 if __name__ == "__main__":
@@ -24,4 +31,4 @@ if __name__ == "__main__":
     with open(sys.argv[1], "r") as f:
         lines = f.readlines()
 
-    print(calculate_placeholder(lines))
+    print(calculate_similarity(lines))
