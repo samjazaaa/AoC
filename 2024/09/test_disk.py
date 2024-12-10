@@ -1,10 +1,11 @@
 import pytest
 
 from compact import calculate_compact
+from fragmentation import calculate_fragmentation
 
 
 test_result_a = 1928
-test_result_b = 34
+test_result_b = 2858
 
 lines = []
 
@@ -20,5 +21,5 @@ def test_compact():
     assert calculate_compact(lines) == test_result_a
 
 
-# def test_resonance():
-#     assert calculate_resonance(lines) == test_result_b
+def test_fragmentation():
+    assert calculate_fragmentation(lines) == test_result_b
