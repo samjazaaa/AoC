@@ -1,12 +1,11 @@
 import pytest
 
 from joltage import calculate_joltage
-
-# from sequence import calculate_sequence
+from friction import calculate_friction
 
 
 test_result_a = 357
-# test_result_b = 4174379265
+test_result_b = 3121910778619
 
 lines = []
 
@@ -22,5 +21,5 @@ def test_joltage():
     assert calculate_joltage(lines) == test_result_a
 
 
-# def test_sequence():
-#     assert calculate_sequence(lines) == test_result_b
+def test_friction():
+    assert calculate_friction(lines) == test_result_b
